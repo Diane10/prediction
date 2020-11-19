@@ -394,6 +394,7 @@ elif datasetchoice == 'Yes':
     if dataset is not None:
       file_details = {"Filename":dataset.name,"FileType":dataset.type,"FileSize":dataset.size}
       st.write(file_details)
+      dataset.seek(0)
       df = pd.read_csv(dataset)
       return df	
   df = file_selector(data_file)	
