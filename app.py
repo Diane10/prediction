@@ -222,7 +222,7 @@ if datasetchoice=='No':
       kernel= st.sidebar.radio("kernel",("linear","rbf"),key='kernel')
       gamma= st.sidebar.radio("gamma(kernel coefficiency",("scale","auto"),key='gamma')
   
-      metrics= st.sidebar.multiselect("What is the metrics to plot?",('confusion matrix','roc_curve','precision_recall_curve'))
+      metrics= st.sidebar.multiselect("What is the metrics to plot",('confusion matrix','roc_curve','precision_recall_curve'))
   
       if st.sidebar.button("classify",key='classify'):
           st.subheader("SVM result")
