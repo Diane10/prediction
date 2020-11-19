@@ -21,6 +21,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.linear_model import LogisticRegression
 import matplotlib.pyplot as plt
 import pickle
+from tensorflow.keras import layers
 from sklearn.preprocessing import StandardScaler
 try:
  
