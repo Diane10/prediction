@@ -174,7 +174,7 @@ if datasetchoice=='No':
   st.sidebar.subheader('Choose Classifer')
   classifier_name = st.sidebar.selectbox(
       'Choose classifier',
-      ('KNN', 'SVM', 'Random Forest','Logistic Regression','XGBOOST','Unsupervised Learning')
+      ('KNN', 'SVM', 'Random Forest','Logistic Regression','XGBOOST','Unsupervised Learning(kmeans)','Deep')
   )
   label= LabelEncoder()
   for col in df.columns:
@@ -209,7 +209,13 @@ if datasetchoice=='No':
   X_tested= sl.fit_transform(X_test)
   
   class_name=['yes','no']
-  
+  model = Sequential()
+  model.add(Flatten())
+  model.add(Dense(units=612,activation='relu'))
+  model.add(Dense(units=15,activation='softmax'))
+#   if classifier_name == 'Deep':
+     
+   
   if classifier_name == 'SVM':
       st.sidebar.subheader('Model Hyperparmeter')
       c= st.sidebar.number_input("c(Reguralization)",0.01,10.0,step=0.01,key='c')
