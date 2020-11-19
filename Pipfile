@@ -11,6 +11,7 @@ streamlit = "*"
 seaborn = "*"
 matplotlib = "*"
 sklearn="*"
+tensorflow==2.0.0
 
 
 [requires]
