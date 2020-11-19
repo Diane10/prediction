@@ -19,6 +19,9 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score,plot_confusion_matrix,plot_roc_curve,precision_score,recall_score,precision_recall_curve,roc_auc_score,auc
 from sklearn.preprocessing import LabelEncoder
 from sklearn.linear_model import LogisticRegression
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.layers import Flatten
 import matplotlib.pyplot as plt
 import pickle
 from tensorflow.keras import layers
